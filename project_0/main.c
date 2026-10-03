@@ -20,3 +20,45 @@ About this program:
     nap:0
     dog:0
   */
+
+
+  #include <stdio.h>
+  #include <stdlib.h> 
+  #include <string.h>
+  #include "smp0_tests.h"
+
+/* B2 */
+#define LENGTH(s) (sizeof(s) / sizeof(*s))
+
+/* Structures */
+/*  Similar to C++ structs, but no member functions or constructors.
+    The name of this structure is WordCountEntry.
+    Instantiate like: WordCountEntry nameOfStructureInstance;
+    C++: Could use std::string for word, but C uses char* 
+*/
+
+typedef struct {
+  char *word;       /* In C++, could be std::string */
+  int counter;
+} WordCountEntry;
+
+/* Complete C5 in this function: Allow multiple words to be specified per line.
+      strok() can be used to split a line into individual tokens.
+      For the seperator characters we use whitespace (spaxe and 
+      tab), as well as the newline character '\n'. We could also 
+      trim the buffer to get rid of the newline, instead. 
+      strok returns NULL when no more tokens are available.
+      Google strtok line to learn more about how to use it */
+
+int process_stream(WordCountEntry entries[], int entry_count)
+{}
+
+
+
+
+
+
+
+
+
+
