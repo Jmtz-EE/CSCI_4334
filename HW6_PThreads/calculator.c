@@ -23,8 +23,12 @@ void *add_line_numbers(void *arg) {
     while (token != NULL) {
         pthread_mutex_lock(&sum_mutex); // locks the mutex variable so that only one thread can access it at a time
         // TODO add the number in token to sum, remember to convert it from string to int using atoi()
-        
+        sum = sum + atoi(token); //My note: Using the atoi() for the conversion
+
         pthread_mutex_unlock(&sum_mutex); // unlocks the mutex variable so that other threads can access it
+
+        token = strtok_r(NULL, " \t\n", &saveptr); //My note: On the first call to strtok() the string to be parsed should be 
+        // specified in str in each subsequent call that shoudl parse the same string, str should be NULL 
     }
     
     pthread_exit(NULL);
